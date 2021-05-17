@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/flexDetails.css">
+
+
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <img src="/img/the_simpsons.png" alt="">
+            <a href="/favorite-quotes">Favorite Qoutes</a>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h3>
+                <%=charachter.character%>
+            </h3>
+            <p>
+                <%=charachter.quote%>
+            </p>
+            <img src="<%=charachter.image%>" alt="">
+
+            <form action="/favorite-quotes/<%=charachter.id%>?_method=PUT" method="POST">
+                <textarea name="updata" id="" cols="30" rows="10"><%=charachter.quote%></textarea><br>
+                <button type="submit">Updata</button><br>
+            </form>
+            <form action="/favorite-quotes/<%=charachter.id%>?_method=DELETE" method="POST">
+                <input type="hidden" name="delete" value="<%=charachter.id%>">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

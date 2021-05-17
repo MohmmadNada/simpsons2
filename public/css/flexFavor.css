@@ -1,0 +1,48 @@
+#containerFlex {
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.Left img,
+.Right img {
+    width: 25%;
+    height: 70%;
+}
+
+.Right {
+    padding: 10px 10px 10px 10px;
+    background-color: #16a085;
+    color: #fefb1e;
+    width: 45%;
+    float: right;
+    text-align: right;
+    height: 300px;
+    margin: 25px 25px 25px 25px;
+}
+
+.Left {
+    padding: 10px 10px 10px 10px;
+    background-color: #16a085;
+    color: #fefb1e;
+    width: 45%;
+    height: 300px;
+    float: left;
+    text-align: left;
+    margin: 25px 25px 25px 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+button {
+    position: relative;
+    background-color: #62C8E4;
+    color: #fefb1e;
+    height: 30px;
+    padding: 6px 6px 6px 6px;
+}

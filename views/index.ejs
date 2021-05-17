@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flex.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="/img/the_simpsons.png" alt="">
+            <a href="/favorite-quotes">Favorite Qoutes</a>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        <div id="flexContainer">
+            <%all_Simpsons.forEach(element=>{%>
+                <div class="<%=element.characterDirection%>">
+                    <img src="<%=element.image%>" alt="">
+
+                    <h3>
+                        <%=element.character%>
+                    </h3>
+                    <p>
+                        <%=element.quote%>
+                    </p>
+                    <form action="/favorite-quotes" method="POST">
+                        <input type="hidden" name="saveCharacter" value="<%=element.quote%>">
+                        <input type="hidden" name="saveCharacter" value="<%=element.character%>">
+                        <input type="hidden" name="saveCharacter" value="<%=element.image%>">
+                        <input type="hidden" name="saveCharacter" value="<%=element.characterDirection%>">
+                        <button type="submit">Favor character</button>
+                    </form>
+                </div>
+                <%  })%>
+        </div>
+    </main>
+</body>
+
+</html>
